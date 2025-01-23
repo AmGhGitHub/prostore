@@ -1,7 +1,16 @@
-import { Button } from "@/components/ui/button";
+import ProductsList from "@/components/shared/header/products/products-list";
+import sampleData from "@/db/sample-data";
 
 const HomePage = () => {
-  return <Button>ProStore</Button>;
+  return (
+    <div>
+      <ProductsList
+        data={sampleData.products}
+        title="Featured Products"
+        limit={4}
+      />
+    </div>
+  );
 };
 
 export default HomePage;
